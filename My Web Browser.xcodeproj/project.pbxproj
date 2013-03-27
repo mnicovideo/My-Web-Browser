@@ -14,6 +14,7 @@
 		E245552E1702056D0081D29E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E245552C1702056D0081D29E /* Credits.rtf */; };
 		E24555301702056D0081D29E /* AppDelegate.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E245552F1702056D0081D29E /* AppDelegate.applescript */; };
 		E24555331702056D0081D29E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24555311702056D0081D29E /* MainMenu.xib */; };
+		E245553A170205790081D29E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2455539170205790081D29E /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E245552D1702056D0081D29E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		E245552F1702056D0081D29E /* AppDelegate.applescript */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.applescript; path = AppDelegate.applescript; sourceTree = "<group>"; };
 		E24555321702056D0081D29E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E2455539170205790081D29E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E245553A170205790081D29E /* WebKit.framework in Frameworks */,
 				E245551C1702056D0081D29E /* Cocoa.framework in Frameworks */,
 				E245551E1702056D0081D29E /* AppleScriptObjC.framework in Frameworks */,
 			);
@@ -48,6 +51,7 @@
 		E245550F1702056D0081D29E = {
 			isa = PBXGroup;
 			children = (
+				E2455539170205790081D29E /* WebKit.framework */,
 				E24555231702056D0081D29E /* My Web Browser */,
 				E245551A1702056D0081D29E /* Frameworks */,
 				E24555191702056D0081D29E /* Products */,
