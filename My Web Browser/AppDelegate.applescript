@@ -8,7 +8,16 @@
 
 script AppDelegate
 	property parent : class "NSObject"
+    
+    property appWindowController : missing value
 	
+    on applicationShouldHandleReopen_hasVisibleWindows_(sender, visible)
+        if visible is false then
+            tell appWindowController to showWindow_(me)
+        end if
+        return yes
+    end applicationShouldHandleReopen_hasVisibleWindows_
+    
 	on applicationWillFinishLaunching_(aNotification)
 		-- Insert code here to initialize your application before any files are opened 
 	end applicationWillFinishLaunching_
