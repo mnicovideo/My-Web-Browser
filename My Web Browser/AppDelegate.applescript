@@ -10,6 +10,7 @@ script AppDelegate
 	property parent : class "NSObject"
     
     property appWindowController : missing value
+    property webView : missing value
 	
     on applicationShouldHandleReopen_hasVisibleWindows_(sender, visible)
         if visible is false then
@@ -19,7 +20,7 @@ script AppDelegate
     end applicationShouldHandleReopen_hasVisibleWindows_
     
 	on applicationWillFinishLaunching_(aNotification)
-		-- Insert code here to initialize your application before any files are opened 
+        tell webView to setMainFrameURL_("http://www.apple.com/")
 	end applicationWillFinishLaunching_
 	
 	on applicationShouldTerminate_(sender)
