@@ -287,6 +287,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "My Web Browser/My Web Browser-Prefix.pch";
 				INFOPLIST_FILE = "My Web Browser/My Web Browser-Info.plist";
+				OSACOMPILE_EXECUTE_ONLY = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
