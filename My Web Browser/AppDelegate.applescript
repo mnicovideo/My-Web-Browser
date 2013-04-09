@@ -20,7 +20,13 @@ script AppDelegate
     end applicationShouldHandleReopen_hasVisibleWindows_
     
 	on applicationWillFinishLaunching_(aNotification)
-        tell webView to setMainFrameURL_("http://www.apple.com/")
+        set userDefaults to standardUserDefaults() of current application's NSUserDefaults
+        set homepageURL to stringForKey_("homepageURL") of userDefaults
+        if homepageURL is missing value then
+            set homepageURL to "http://www.apple.com/"
+            tell userDefaults to setObject_forKey_(homepageURL,"homepageURL")
+        end if
+        tell webView to setMainFrameURL_(homepageURL)
 	end applicationWillFinishLaunching_
 	
 	on applicationShouldTerminate_(sender)

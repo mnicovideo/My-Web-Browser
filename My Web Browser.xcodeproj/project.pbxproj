@@ -15,6 +15,7 @@
 		E24555301702056D0081D29E /* AppDelegate.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E245552F1702056D0081D29E /* AppDelegate.applescript */; };
 		E24555331702056D0081D29E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24555311702056D0081D29E /* MainMenu.xib */; };
 		E245553A170205790081D29E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2455539170205790081D29E /* WebKit.framework */; };
+		E26D5CF21713B32800BEBCB1 /* WebViewDelegate.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E26D5CF11713B32800BEBCB1 /* WebViewDelegate.applescript */; };
 		E2E75151170856F90020E42C /* PreferencesWindow.applescript in Sources */ = {isa = PBXBuildFile; fileRef = E2E75150170856F90020E42C /* PreferencesWindow.applescript */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		E245552F1702056D0081D29E /* AppDelegate.applescript */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.applescript; path = AppDelegate.applescript; sourceTree = "<group>"; };
 		E24555321702056D0081D29E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E2455539170205790081D29E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		E26D5CF11713B32800BEBCB1 /* WebViewDelegate.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = WebViewDelegate.applescript; sourceTree = "<group>"; };
 		E2E75150170856F90020E42C /* PreferencesWindow.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = PreferencesWindow.applescript; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,7 +55,6 @@
 		E245550F1702056D0081D29E = {
 			isa = PBXGroup;
 			children = (
-				E2455539170205790081D29E /* WebKit.framework */,
 				E24555231702056D0081D29E /* My Web Browser */,
 				E245551A1702056D0081D29E /* Frameworks */,
 				E24555191702056D0081D29E /* Products */,
@@ -71,6 +72,7 @@
 		E245551A1702056D0081D29E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E2455539170205790081D29E /* WebKit.framework */,
 				E245551B1702056D0081D29E /* Cocoa.framework */,
 				E245551D1702056D0081D29E /* AppleScriptObjC.framework */,
 				E245551F1702056D0081D29E /* Other Frameworks */,
@@ -92,9 +94,10 @@
 			isa = PBXGroup;
 			children = (
 				E245552F1702056D0081D29E /* AppDelegate.applescript */,
+				E2E75150170856F90020E42C /* PreferencesWindow.applescript */,
+				E26D5CF11713B32800BEBCB1 /* WebViewDelegate.applescript */,
 				E24555311702056D0081D29E /* MainMenu.xib */,
 				E24555241702056D0081D29E /* Supporting Files */,
-				E2E75150170856F90020E42C /* PreferencesWindow.applescript */,
 			);
 			path = "My Web Browser";
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				E245552A1702056D0081D29E /* main.m in Sources */,
 				E24555301702056D0081D29E /* AppDelegate.applescript in Sources */,
 				E2E75151170856F90020E42C /* PreferencesWindow.applescript in Sources */,
+				E26D5CF21713B32800BEBCB1 /* WebViewDelegate.applescript in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
