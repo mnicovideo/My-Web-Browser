@@ -21,16 +21,22 @@ script AppDelegate
     
 	on applicationWillFinishLaunching_(aNotification)
         set userDefaults to standardUserDefaults() of current application's NSUserDefaults
+        
+        if stringForKey_("WebKitDeveloperExtras") of userDefaults is missing value then
+            tell userDefaults to setBool_forKey_(false,"WebKitDeveloperExtras")
+        end if
+        
         set homepageURL to stringForKey_("homepageURL") of userDefaults
         if homepageURL is missing value then
             set homepageURL to "http://www.apple.com/"
             tell userDefaults to setObject_forKey_(homepageURL,"homepageURL")
         end if
         tell webView to setMainFrameURL_(homepageURL)
+        
 	end applicationWillFinishLaunching_
 	
 	on applicationShouldTerminate_(sender)
-		-- Insert code here to do any housekeeping before your application quits 
+		-- Insert code here to do any housekeeping before your application quits
 		return current application's NSTerminateNow
 	end applicationShouldTerminate_
 	
