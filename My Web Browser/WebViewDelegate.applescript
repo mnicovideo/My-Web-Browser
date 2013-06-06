@@ -65,4 +65,18 @@ script WebViewDelegate
         end if
     end
     
+    on webView_createWebViewWithRequest_(sender, request)
+        -- request is null, this is bug.
+        -- if you open self webView, return sender
+        -- log "you can't open new window, because request is null. this is bug of WebKit."
+        -- log {sender, request}
+        return sender
+    end
+    
+    -- === PolicyDelegate ============================
+    
+    on webView_decidePolicyForNewWindowAction_request_newFrameName_decisionListener_(sender, windowAction, request, frameName, listener)
+        tell sender to setMainFrameURL_(absoluteString of |URL| of request as text)
+    end
+    
 end script
