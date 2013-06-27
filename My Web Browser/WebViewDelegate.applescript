@@ -73,6 +73,20 @@ script WebViewDelegate
         return sender
     end
     
+    on webView_contextMenuItemsForElement_defaultMenuItems_(sender,element,defaultMenuItems)
+        set modifiedMenuItems to {}
+        repeat with mItem in mutableCopy() of defaultMenuItems
+            if tag() of mItem = 1 then -- new window
+                --skip
+            else if tag() of mItem = 2 then -- download link
+                --skip
+            else
+                set the end of modifiedMenuItems to mItem
+            end if
+        end repeat
+        return modifiedMenuItems
+    end
+    
     -- === PolicyDelegate ============================
     
     on webView_decidePolicyForNewWindowAction_request_newFrameName_decisionListener_(sender, windowAction, request, frameName, listener)
